@@ -202,7 +202,7 @@ def raise_for_exception_adu(resp_adu):
     pdu_to_function_code_or_raise_error(resp_pdu)
 
 
-def send_message(adu, serial_port):
+def send_message(adu, serial_port, flush_on_write=False):
     """ Send ADU over serial to to server and return parsed response.
 
     :param adu: Request ADU.
@@ -210,7 +210,9 @@ def send_message(adu, serial_port):
     :return: Parsed response from server.
     """
     serial_port.write(adu)
-    serial_port.flush()
+
+    if flush_on_write:
+        serial_port.flush()
 
     # Check exception ADU (which is shorter than all other responses) first.
     exception_adu_size = 5
