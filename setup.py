@@ -11,12 +11,12 @@ cwd = os.path.dirname(os.path.abspath(__name__))
 
 long_description = open(os.path.join(cwd, 'README.rst'), 'r').read()
 
-setup(name='uModbus',
-      version='1.0.2',
-      author='Auke Willem Oosterhoff',
-      author_email='a.oosterhoff@climotion.com',
+setup(name='uModbus-extended',
+      version='1.0.3',
+      author='Simone Fardella',
+      author_email='fardella.simone@gmail.com',
       description='Implementation of the Modbus protocol in pure Python.',
-      url='https://github.com/AdvancedClimateSystems/umodbus/',
+      url='https://github.com/Simonefardella/uModbus',
       long_description=long_description,
       license='MPL',
       packages=[

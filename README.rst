@@ -1,17 +1,11 @@
-.. image:: https://travis-ci.org/AdvancedClimateSystems/uModbus.svg
-   :target: https://travis-ci.org/AdvancedClimateSystems/uModbus
-
-.. image:: https://coveralls.io/repos/AdvancedClimateSystems/uModbus/badge.svg?service=github
-    :target: https://coveralls.io/github/AdvancedClimateSystems/uModbus
-
-.. image:: https://img.shields.io/pypi/v/uModbus.svg
-    :target: https://pypi.python.org/pypi/uModbus
-
-.. image:: https://img.shields.io/pypi/pyversions/uModbus.svg
-    :target: https://pypi.python.org/pypi/uModbus
-
 uModbus
 =======
+
+This is a fork with some additional features of the original uModbus library, more specifically:
+
+- Add the features of reading/writing on devices/systems with values bigger than 16 Bit data
+- Add the flush_on_write parameter to disable the auto flush after writing (some hardware drivers auto manage the flush on write)
+
 
 uModbus or (μModbus) is a pure Python implementation of the Modbus protocol as
 described in the `MODBUS Application Protocol Specification V1.1b3`_. uModbus
@@ -125,11 +119,9 @@ Other featues:
 License
 -------
 
-uModbus software is licensed under `Mozilla Public License`_. © 2018 `Advanced
-Climate Systems`_.
+uModbus software is licensed under `Mozilla Public License`_. © 2018.
 
 .. External References:
-.. _Advanced Climate Systems: http://www.advancedclimate.nl/
 .. _GitHub: https://github.com/AdvancedClimateSystems/uModbus/
 .. _MODBUS Application Protocol Specification V1.1b3: http://modbus.org/docs/Modbus_Application_Protocol_V1_1b3.pdf
 .. _Mozilla Public License: https://github.com/AdvancedClimateSystems/uModbus/blob/develop/LICENSE
