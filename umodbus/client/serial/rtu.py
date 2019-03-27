@@ -43,6 +43,7 @@ The lenght of this ADU is 8 bytes::
 
 """
 import struct
+import time
 
 from umodbus.client.serial.redundancy_check import get_crc, validate_crc
 from umodbus.functions import (create_function_from_response_pdu,
@@ -211,6 +212,7 @@ def send_message(adu, serial_port, flush_on_write=False):
     """
     serial_port.write(adu)
 
+    time.sleep(0.05) #Delay for slow devices
     if flush_on_write:
         serial_port.flush()
 
